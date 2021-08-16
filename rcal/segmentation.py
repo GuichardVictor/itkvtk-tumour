@@ -12,10 +12,12 @@ def segment_tumour(input_filename, output_filename):
     reader = itk.ImageFileReader.New(FileName=input_filename)
 
     medianFilter = itk.MedianImageFilter.New(Input=reader.GetOutput(), Radius=[9, 9, 0])
+    
+    normalizeFilter = itk.RescaleIntensityImageFilter(Input=medianFilter.GetOutput(), OutputMinimum=0, OutputMaximum=255)
 
-    thresholdFilter = itk.BinaryThresholdImageFilter.New(Input=medianFilter.GetOutput())
+    thresholdFilter = itk.BinaryThresholdImageFilter.New(Input=normalizeFilter)
 
-    thresholdFilter.SetUpperThreshold(int(2592 * 0.34))
+    thresholdFilter.SetUpperThreshold(int(255 * 0.75))
     thresholdFilter.SetOutsideValue(255)
     thresholdFilter.SetInsideValue(0)
 

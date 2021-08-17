@@ -2,6 +2,9 @@
 
 This project was made to try the itk vtk libraries. The program will perform both segmentation and rendering of a brain tumour.
 
+![example](https://github.com/GuichardVictor/itkvtk-tumour/blob/master/data/example.gif)
+
+
 ## Authors
 
 * Victor Guichard

@@ -319,6 +319,6 @@ def run_visualization(datafile, maskfile=None):
     app = Qt.QApplication(sys.argv)
     
     window = QtVTKMainWindow(datafile, maskfile)
-    window.setWindowTitle('EPITA - IMAGE 2021 - ITK/VTK - Victor GUICHARD / Guillaume Valente')
+    window.setWindowTitle('ITK/VTK - Victor GUICHARD')
     
     sys.exit(app.exec_())

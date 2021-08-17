@@ -1,11 +1,10 @@
 # VTK - ITK Project
 
-## EPITA
+This project was made to try the itk vtk libraries. The program will perform both segmentation and rendering of a brain tumour.
 
 ## Authors
 
 * Victor Guichard
-* Guillaume Valente
 
 ---
 
